@@ -35,7 +35,7 @@ app.config['SECRET_KEY'] = 'opencv'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['DOWNLOAD_FOLDER'] = DOWNLOAD_FOLDER
 # limit upload size upto 6mb
-app.config['MAX_CONTENT_LENGTH'] = 6 * 1024 * 1024
+app.config['MAX_CONTENT_LENGTH'] = 6 * 1024 * 1024ททท
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -151,9 +151,9 @@ def event_handle(event):
         msg = str(event["message"]["text"])
         if(msg == "สวัสดี") :
           replyObj = TextSendMessage(text="ดีด้วย")
-        elif (msg == "กินก๋วยเตี๋ยวมั้ย")
+        elif (msg == "กินก๋วยเตี๋ยวมั้ย") :
           replyObj = TextSendMessage(text="เอาดิ")
-        elif (msg == "กินโกโก้มั้ย")
+        elif (msg == "กินโกโก้มั้ย") :
           replyObj = TextSendMessage(text="กินน")
         else :
         message_content = line_bot_api.get_message_content(event['message']['id'])
