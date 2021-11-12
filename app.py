@@ -153,7 +153,8 @@ def event_handle(event):
           replyObj = TextSendMessage(text="ดีด้วย")
         elif (msg == "กินก๋วยเตี๋ยวมั้ย")
           replyObj = TextSendMessage(text="เอาดิ")
-        try:
+        elif (msg == "กินโกโก้มั้ย")
+          replyObj = TextSendMessage(text="กินน")
             message_content = line_bot_api.get_message_content(event['message']['id'])
             i = Image.open(BytesIO(message_content.content))
             filename = event['message']['id'] + '.jpg'
